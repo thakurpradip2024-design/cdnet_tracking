@@ -3,10 +3,11 @@ from src.evaluate import valid_gt_frame, mask_to_bbox, iou, center_error
 from src.tracker import OpenCV_CSRT_Tracker, OpenCV_KCF_Tracker, OpenCV_MOSSE_Tracker
 # ---------------- CONFIG ----------------
 SEQUENCE_PATH = r"D:\Datasets\dataset\baseline\highway"
-TRACKER_TYPE = "MOSSE"   # options: "CSRT" or "KCF"
+TRACKER_TYPE = "KCF"   # options: "CSRT" or "KCF"
 # ----------------------------------------
 
 # Select tracker
+
 if TRACKER_TYPE == "CSRT":
     tracker = OpenCV_CSRT_Tracker()
 elif TRACKER_TYPE == "KCF":
